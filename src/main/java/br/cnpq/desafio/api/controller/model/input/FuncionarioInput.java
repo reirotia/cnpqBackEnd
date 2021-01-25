@@ -16,25 +16,19 @@ public class FuncionarioInput {
 
 	@NotBlank
 	private String nome;
-		
+	@NotBlank
+	@CPF
 	private String cpf;
-	//private OffsetDateTime dataNascimento;
-	
+	@Email
 	private String email;
 	private String telefone;
-
-	/*
 	private EnderecoInput endereco;
-	*/
-	
 	@Valid
 	@NotNull
 	private FuncaoIdInput funcao;
-	
+
 	@Valid
 	@NotNull
 	private DepartamentoIdInput departamento;
-	
-	
 
 }
