@@ -16,5 +16,5 @@ public class FuncionarioModel {
 	
 	private EnderecoModel endereco;
 	private DepartamentoModel departamento;
-	private Funcao funcao; 
+	private FuncaoModel  funcao; 
 }

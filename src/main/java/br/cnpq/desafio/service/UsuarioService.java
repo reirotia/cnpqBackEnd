@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.cnpq.desafio.domain.Usuario;
+import br.cnpq.desafio.domain.UsuarioLogin;
 import br.cnpq.desafio.domain.repository.UsuarioRepository;
 
 @Service
@@ -17,7 +17,7 @@ public class UsuarioService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		Usuario usuario = usuarioRepository.findByUsername(username)
+		UsuarioLogin usuario = usuarioRepository.findByUsername(username)
 				.orElseThrow(() -> new UsernameNotFoundException("Usuario não encontrado"));
 		return User.builder()
 				.username(usuario.getUsername())

@@ -3,12 +3,14 @@ package br.cnpq.desafio.domain.repository;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import br.cnpq.desafio.domain.Usuario;
+import br.cnpq.desafio.domain.UsuarioLogin;
 
-public interface UsuarioRepository  extends JpaRepository<Usuario, Integer>{
+@Repository
+public interface UsuarioRepository  extends JpaRepository<UsuarioLogin, Integer>{
 
-	Optional<Usuario> findByUsername(String username);
+	Optional<UsuarioLogin> findByUsername(String username);
 	
 	
 }

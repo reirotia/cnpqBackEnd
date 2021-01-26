@@ -1,5 +1,6 @@
 package br.cnpq.desafio.core.security;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,8 +16,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 		
 		http.authorizeRequests()
-		.antMatchers(HttpMethod.GET, "/funcionarios/**").permitAll()
-		.antMatchers(HttpMethod.POST, "/usuarios/**").permitAll()
+		.antMatchers("/usuarios-login/**").permitAll()
 		.anyRequest().denyAll();
 		
 		
